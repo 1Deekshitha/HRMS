@@ -26,6 +26,7 @@ export default function Nav() {
       { path: "/payroll", label: "Payroll", icon: "💰", roles: ["HR", "Admin", "Management Admin"] },
       { path: "/performance", label: "Performance", icon: "📈", roles: ["HR", "Senior Manager", "Admin", "Management Admin"] },
       { path: "/goals", label: "Goals", icon: "🎯", roles: ["HR", "Senior Manager", "Admin", "Management Admin"] },
+      { path: "/recruitment", label: "Recruitment", icon: "📄", roles: ["all"] },
     ];
 
     return allItems.filter(item => 

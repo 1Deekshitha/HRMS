@@ -15,6 +15,7 @@ import Attendance from "./pages/Attendance";
 import Payroll from "./pages/Payroll";
 import Performance from "./pages/Performance";
 import Goals from "./pages/Goals";
+import Recruitment from "./pages/Recruitment";
 
 // Layout Component
 import Nav from "./components/Nav";
@@ -104,6 +105,18 @@ export default function App() {
               <ProtectedRoute allowedRoles={["HR", "Senior Manager", "Admin", "Management Admin"]}>
                 <AppLayout>
                   <Goals />
+                </AppLayout>
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Recruitment - All roles can access */}
+          <Route
+            path="/recruitment"
+            element={
+              <ProtectedRoute>
+                <AppLayout>
+                  <Recruitment />
                 </AppLayout>
               </ProtectedRoute>
             }
